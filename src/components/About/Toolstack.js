@@ -10,17 +10,28 @@ import {
   SiLinux,
 } from "react-icons/si";
 
+function ToolIcon({ icon: Icon, label }) {
+  return (
+    <Col xs={4} md={2} className="tech-icon-wrapper">
+      <div className="tech-icons">
+        <Icon />
+      </div>
+      <span className="tech-icon-label">{label}</span>
+    </Col>
+  );
+}
+
 function Toolstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       
-      <Col xs={4} md={2} className="tech-icons"><SiVisualstudiocode /></Col>
-      <Col xs={4} md={2} className="tech-icons"><SiPostman /></Col>
-      <Col xs={4} md={2} className="tech-icons"><SiGit /></Col>
-      <Col xs={4} md={2} className="tech-icons"><SiGithub /></Col>
-      <Col xs={4} md={2} className="tech-icons"><SiXampp /></Col>
-      <Col xs={4} md={2} className="tech-icons"><SiGooglecloud /></Col>
-      <Col xs={4} md={2} className="tech-icons"><SiLinux /></Col>
+      <ToolIcon icon={SiVisualstudiocode} label="VS Code" />
+      <ToolIcon icon={SiPostman} label="Postman" />
+      <ToolIcon icon={SiGit} label="Git" />
+      <ToolIcon icon={SiGithub} label="GitHub" />
+      <ToolIcon icon={SiXampp} label="XAMPP" />
+      <ToolIcon icon={SiGooglecloud} label="GCP" />
+      <ToolIcon icon={SiLinux} label="Linux" />
 
     </Row>
   );

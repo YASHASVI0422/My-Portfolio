@@ -5,7 +5,6 @@ import {
   DiJavascript1,
   DiReact,
   DiPython,
-  DiGit,
   DiJava,
   DiHtml5,
   DiCss3,
@@ -23,36 +22,47 @@ import {
   SiKotlin,
 } from "react-icons/si";
 
+function TechIcon({ icon: Icon, label }) {
+  return (
+    <Col xs={4} md={2} className="tech-icon-wrapper">
+      <div className="tech-icons">
+        <Icon />
+      </div>
+      <span className="tech-icon-label">{label}</span>
+    </Col>
+  );
+}
+
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       
       {/* Programming Languages */}
-      <Col xs={4} md={2} className="tech-icons"><DiPython /></Col>
-      <Col xs={4} md={2} className="tech-icons"><DiJava /></Col>
-      <Col xs={4} md={2} className="tech-icons"><CgCPlusPlus /></Col>
-      <Col xs={4} md={2} className="tech-icons"><SiKotlin /></Col>
-      <Col xs={4} md={2} className="tech-icons"><DiPhp /></Col>
+      <TechIcon icon={DiPython} label="Python" />
+      <TechIcon icon={DiJava} label="Java" />
+      <TechIcon icon={CgCPlusPlus} label="C++" />
+      <TechIcon icon={SiKotlin} label="Kotlin" />
+      <TechIcon icon={DiPhp} label="PHP" />
 
       {/* Web Technologies */}
-      <Col xs={4} md={2} className="tech-icons"><DiHtml5 /></Col>
-      <Col xs={4} md={2} className="tech-icons"><DiCss3 /></Col>
-      <Col xs={4} md={2} className="tech-icons"><DiJavascript1 /></Col>
-      <Col xs={4} md={2} className="tech-icons"><DiReact /></Col>
+      <TechIcon icon={DiHtml5} label="HTML5" />
+      <TechIcon icon={DiCss3} label="CSS3" />
+      <TechIcon icon={DiJavascript1} label="JavaScript" />
+      <TechIcon icon={DiReact} label="React" />
 
       {/* Databases */}
-      <Col xs={4} md={2} className="tech-icons"><DiMysql /></Col>
-      <Col xs={4} md={2} className="tech-icons"><SiPostgresql /></Col>
-      <Col xs={4} md={2} className="tech-icons"><SiFirebase /></Col>
+      <TechIcon icon={DiMysql} label="MySQL" />
+      <TechIcon icon={SiPostgresql} label="PostgreSQL" />
+      <TechIcon icon={SiFirebase} label="Firebase" />
 
       {/* ML / AI */}
-      <Col xs={4} md={2} className="tech-icons"><SiScikitlearn /></Col>
-      <Col xs={4} md={2} className="tech-icons"><SiTensorflow /></Col>
-      <Col xs={4} md={2} className="tech-icons"><SiPytorch /></Col>
-      <Col xs={4} md={2} className="tech-icons"><SiFastapi /></Col>
+      <TechIcon icon={SiScikitlearn} label="Scikit-learn" />
+      <TechIcon icon={SiTensorflow} label="TensorFlow" />
+      <TechIcon icon={SiPytorch} label="PyTorch" />
+      <TechIcon icon={SiFastapi} label="FastAPI" />
 
       {/* OS */}
-      <Col xs={4} md={2} className="tech-icons"><SiLinux /></Col>
+      <TechIcon icon={SiLinux} label="Linux" />
     </Row>
   );
 }

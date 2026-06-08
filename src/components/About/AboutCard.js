@@ -4,7 +4,13 @@ import { ImPointRight } from "react-icons/im";
 
 function AboutCard() {
   return (
-    <Card className="quote-card-view">
+    <Card className="terminal-card">
+      <div className="terminal-header">
+        <span className="terminal-dot red"></span>
+        <span className="terminal-dot yellow"></span>
+        <span className="terminal-dot green"></span>
+        <span style={{ marginLeft: "10px", fontFamily: "JetBrains Mono, monospace", fontSize: "0.8em", color: "var(--text-muted)" }}>about_yashasvi.sh</span>
+      </div>
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
