@@ -29,6 +29,7 @@ function Projects() {
               title="Affiliate CRM"
               description="AffiliateCRM is an enterprise-grade MERN stack (MongoDB, Express, React, Node.js) platform integrated with Google Gemini AI and real-time WebSockets (Socket.io). It is designed to manage affiliates, track leads, and facilitate live support ticketing with advanced features."
               ghLink="https://github.com/YASHASVI0422/AffiliateCRM"
+              demoLink="https://affiliatecrm.netlify.app"
               tags={["MongoDB", "Express", "React", "Node.js", "Gemini AI", "Socket.io"]}
             />
           </Col>
